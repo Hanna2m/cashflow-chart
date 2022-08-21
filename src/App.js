@@ -76,17 +76,14 @@ function App() {
 
   return (
     <>
-    <div>
+    <div className="balance-info">
       <h2>Balance: {endBalance} EUR</h2>
     </div>
-    <div>
-    
-    </div>
     <div className='filter'>
-      <button onClick={()=>{setPeriod(3)}}>3 days</button>
-      <button onClick={()=>{setPeriod(5)}}>5 days</button>
-      <button onClick={()=>{setPeriod(30)}}>1 month</button>
-      <button onClick={()=>{setPeriod(90)}}>3 months</button>
+      <button className='custom-button' onClick={()=>{setPeriod(3)}}>3 days</button>
+      <button className='custom-button' onClick={()=>{setPeriod(5)}}>5 days</button>
+      <button className='custom-button' onClick={()=>{setPeriod(30)}}>1 month</button>
+      <button className='custom-button' onClick={()=>{setPeriod(90)}}>3 months</button>
     </div>
     <div className="App">
       <LineChart chartData={userData}/>
