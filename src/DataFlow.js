@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
-
 import getPeriodFlow from "./utils/getPeriodFlow";
 
 const getData = async() => {
