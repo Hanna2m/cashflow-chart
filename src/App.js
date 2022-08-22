@@ -5,13 +5,12 @@ import LineChart from './components/LineChart';
 import getPeriodFlow from "./utils/getPeriodFlow";
 import { DataFlow } from "./DataFlow"
 
-
-
 function App() {
   const [transactionData, setTransactionData] = useState();
   const [userData, setUserData] = useState(null)
   const [period, setPeriod] = useState(3);
   let isFetching = false;
+  const endBalance = 118;
 
   const fetchData = async () => {
     if (!transactionData && !isFetching) {
@@ -63,8 +62,7 @@ function App() {
       ],
     });
   }
-  const endBalance = 118;
-
+  
   if (!transactionData) {
     return "Loading...";
   } 
